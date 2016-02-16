@@ -1,8 +1,7 @@
-#!/usr/bin/Cli -p2
-enable
+#!/bin/bash
 echo "STARTING RENASAR ZEROTOUCH"
-copy http://<%=server%>:<%=port%>/api/common/templates/<%=startupConfig%> flash:startup-config
-copy http://<%=server%>:<%=port%>/api/common/templates/<%=bootConfig%> flash:boot-config
-copy http://<%=server%>:<%=port%>/<%=eosImage%> flash:
+wget -O /mnt/flash/startup-config http://<%=server%>:<%=port%>/api/common/templates/<%=startupConfig%>
+wget -O /mnt/flash/test-config http://<%=server%>:<%=port%>/api/common/templates/test2-config
+wget -O /mnt/flash/boot-config http://<%=server%>:<%=port%>/api/common/templates/<%=bootConfig%> 
+wget -P /mnt/flash http://<%=server%>:<%=port%>/<%=eosImage%> 
 echo "RENASAR ZEROTOUCH FINISHED"
-exit

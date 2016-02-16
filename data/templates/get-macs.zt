@@ -1,0 +1,7 @@
+#!/bin/bash
+
+MAC=`cat /sys/class/net/ma1/address`
+wget -O /mnt/flash/profile.zt http://<%=server%>:<%=port%>/api/common/profiles?macs=$MAC
+#chmod +x /tmp/profile.zt
+/mnt/flash/profile.zt
+
