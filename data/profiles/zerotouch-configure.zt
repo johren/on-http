@@ -1,7 +1,6 @@
 #!/bin/bash
 echo "STARTING RENASAR ZEROTOUCH"
 wget -O /mnt/flash/startup-config http://<%=server%>:<%=port%>/api/common/templates/<%=startupConfig%>
-wget -O /mnt/flash/test-config http://<%=server%>:<%=port%>/api/common/templates/test2-config
 wget -O /mnt/flash/boot-config http://<%=server%>:<%=port%>/api/common/templates/<%=bootConfig%> 
 wget -P /mnt/flash http://<%=server%>:<%=port%>/<%=eosImage%> 
 echo "RENASAR ZEROTOUCH FINISHED"
